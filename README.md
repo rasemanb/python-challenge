@@ -2,6 +2,7 @@
 Data Analytics Bootcamp 2022 Python Challenge
 
 For this challenge we were asked to analyze two different datasets and calculate the following:
+
     Pybank
 
         * The total number of months included in the dataset
@@ -15,7 +16,7 @@ For this challenge we were asked to analyze two different datasets and calculate
         * The greatest decrease in profits (date and amount) over the entire period
     
     Pypoll
-    
+
         * The total number of votes cast
 
         * A complete list of candidates who received votes
