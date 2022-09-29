@@ -15,6 +15,7 @@ with open(csvpath) as csvfile:
     mindate = []
     for row in csvreader:
         month.append(row[0])
+        ct = len(month)
         tot.append(int(row[1]))
         tot_amt = sum(tot)
 
@@ -31,9 +32,13 @@ with open(csvpath) as csvfile:
     mindate = change.index(minval) + 1
     date2 = month[mindate]
 
+output = os.path.join('analysis', 'analysis.txt')
 
- 
-
-
-
-
+with open (output, 'w') as txtfile:
+    txtfile.write('Financial Analysis\n')
+    txtfile.write('----------------------------\n')
+    txtfile.write(f'Total Months: {ct}\n')
+    txtfile.write(f'Total: ${tot_amt}\n')
+    txtfile.write(f'Average Change: ${avg}\n')
+    txtfile.write(f'Greatest Increase in Profits: {date1} (${maxval})\n')
+    txtfile.write(f'Greatest Decrease in Profits: {date2} (${minval})\n')
